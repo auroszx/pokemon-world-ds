@@ -4,6 +4,9 @@
 dofile("damage.lua")
 dofile("wireless.lua")
 dofile("sprites.lua")
+dofile("resourceLoader.lua")
+dofile("battle.lua")
+dofile("multiplayer.lua")
 
 Glaceon = {75, 201, 123, 181}
 Garchomp = {78, 270, 210, 163}
@@ -19,8 +22,9 @@ Garchomp[1] = Garchomp[2] - damagetest1
 
 loadRedSpr()
 
-Wifi.initDefault()
-timeTest = Timer.new()
+--Wifi.initDefault()
+--timeTest = Timer.new()
+Nifi.init(1)
 
 while true do
 
@@ -28,17 +32,18 @@ while true do
 	screen.print(SCREEN_UP, 10, 20, "Glaceon usa Ice Fang", Azul)
 	screen.print(SCREEN_UP, 10, 30, "Garchomp ahora tiene HP = " .. Garchomp[1] .. ".", Azul)
 	
-	Wifi.scanAP()
+--	Wifi.scanAP()
 
-	timeTest:start()
+--	timeTest:start()
 	
-	if timeTest:getTime() > 500 then
-		testTable = checkNetwork()
-		timeTest:reset()
-		timeTest:start()
-	end
+--	if timeTest:getTime() > 500 then
+--		testTable = checkNetwork()
+--		timeTest:reset()
+--		timeTest:start()
+--	end
 	
-	showNetwork()
+--	showNetwork()
+	
 	--Mover sprite
 	Controls.read()
 	if Keys.held.Up or Keys.held.Down or Keys.held.Left or Keys.held.Right then
@@ -53,15 +58,21 @@ while true do
 	end
 	if Keys.held.Left then
 		direction = 2
-		y = x - 1
+		x = x - 1
 	end
-		if Keys.held.Right then
+	if Keys.held.Right then
 		direction = 3
-		y = x + 1
+		x = x + 1
 	end
-		if Keys.held.Up then
+	if Keys.held.Up then
 		direction = 4
 		y = y - 1
+	end
+	if Keys.newPress.A then
+		askBattle("Auros", "Necros")
+	end
+	if Keys.newPress.B then
+		checkBattle("Auros", "Necros")
 	end
 	
 	--Renderiza todo en base al bucle.
