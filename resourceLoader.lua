@@ -5,7 +5,7 @@
 -- Función usada para cargar mapas.
 -- Se usa junto a la verificación de redes, generalmente.
 function mapLoader(mapName)
-	myMap = Image.load("somemap.png", VRAM)
+	myMap = Image.load("Sprite1.png", VRAM)
 	--Debería añadir colisiones de acuerdo al mapa. Probemos luego.
 	return myMap
 end
