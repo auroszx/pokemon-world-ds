@@ -1,5 +1,5 @@
---Código de prueba para el cálculo de daño.
---Test code for damage calculation.
+-- Código de prueba para las funciones que se van agregando.
+-- Test code for recently added functions.
 
 dofile("damage.lua")
 dofile("wireless.lua")
@@ -75,7 +75,8 @@ while true do
 		checkBattle("Auros", "Necros")
 	end
 	
-	--Renderiza todo en base al bucle.
+	-- Renderiza todo en base al bucle.
+	-- Renders everything inside the loop.
 	render()
 end 
 
