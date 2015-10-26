@@ -3,7 +3,7 @@
 
 dofile("damage.lua")
 dofile("wireless.lua")
-dofile("sprites.lua")
+-- dofile("sprites.lua")
 -- dofile("resourceLoader.lua")
 dofile("battle.lua")
 dofile("multiplayer.lua")
@@ -20,7 +20,7 @@ direction = 1
 damagetest1 = damageCalc(Glaceon[1], Glaceon[3], Garchomp[4], icefang, 1.5, 4, 1)
 Garchomp[1] = Garchomp[2] - damagetest1
 
-loadRedSpr()
+loadSprite()
 
 --Wifi.initDefault()
 --timeTest = Timer.new()
@@ -47,9 +47,9 @@ while true do
 	--Mover sprite
 	Controls.read()
 	if Keys.held.Up or Keys.held.Down or Keys.held.Left or Keys.held.Right then
-		Red:playAnimation(SCREEN_DOWN, x, y, direction)
+		Player:playAnimation(SCREEN_DOWN, x, y, direction)
 	else                                                                                
-		Red:drawFrame(SCREEN_DOWN, x, y, -2 + direction * 3)
+		Player:drawFrame(SCREEN_DOWN, x, y, -2 + direction * 3)
 	end
 	
 	if Keys.held.Down then
@@ -79,8 +79,8 @@ while true do
 	render()
 end 
 
-Red:destroy()
-Red = nil
+Player:destroy()
+Player = nil
 x = nil
 y = nil
 direction = nil
