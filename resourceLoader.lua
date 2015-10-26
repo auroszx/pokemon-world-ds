@@ -21,7 +21,6 @@ end
 -- Lista de colores. Uso los siguientes links para pruebas:
 -- http://planetpixelemporium.com/tutorialpages/light.html
 -- http://forums.cgarchitect.com/8108-rgb-colour-sun.html
-
 colorAfternoon = Color.new(31, 23, 17) -- Original: (255, 197, 143)
 colorNight = Color.new(7, 18, 31) -- Original: (64, 156, 255)
 -- Variables para hora y fecha.
