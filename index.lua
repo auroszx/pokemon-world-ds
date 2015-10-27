@@ -20,7 +20,7 @@ direction = 1
 damagetest1 = damageCalc(Glaceon[1], Glaceon[3], Garchomp[4], icefang, 1.5, 4, 1)
 Garchomp[1] = Garchomp[2] - damagetest1
 
-loadSprite()
+loadSprite("Sprite1.png")
 
 --Wifi.initDefault()
 --timeTest = Timer.new()
