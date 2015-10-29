@@ -31,8 +31,8 @@ end
 currentMap = mapLoader()
 
 function mapDisplay()
-	mapResX = currentMap.width()
-	mapResY = currentMap.height()
+	mapResX = Image.width(currentMap)
+	mapResY = Image.height(currentMap)
 	Image.screen.blit(SCREEN_UP, 0, 0, currentMap, 0, 0, mapResX, mapResY)
 end
 

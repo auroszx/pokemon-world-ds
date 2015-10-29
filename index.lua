@@ -1,6 +1,7 @@
 -- Código de prueba para las funciones que se van agregando.
 -- Test code for recently added functions.
 
+dofile("movement.lua")
 dofile("damage.lua")
 dofile("wireless.lua")
 dofile("resourceLoader.lua")
@@ -19,23 +20,23 @@ Garchomp[1] = Garchomp[2] - damagetest1
 loadSprite("Sprite1.png")
 
 -- Wifi.initDefault()
--- timeTest = Timer.new()
 Nifi.init(1)
 
 while true do
 	
 --	Wifi.scanAP()
-
 --	timeTest:start()
-	
 --	showNetwork()
 	
-	--Mover sprite
+	-- Mover sprite
 	Controls.read()
+
+	playerMovement()
 
 	if Keys.newPress.A then
 		askBattle("Auros", "Necros")
 	end
+	
 	if Keys.newPress.B then
 		checkBattle("Auros", "Necros")
 	end
