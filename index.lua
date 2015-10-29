@@ -3,7 +3,6 @@
 
 dofile("damage.lua")
 dofile("wireless.lua")
--- dofile("sprites.lua")
 dofile("resourceLoader.lua")
 dofile("battle.lua")
 dofile("multiplayer.lua")
