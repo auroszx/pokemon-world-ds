@@ -11,6 +11,15 @@ function loadSprite(mySprite)
 	Player:addAnimation({9, 10, 11, 10}, 500)
 end
 
+function destroySprite()
+	Player:destroy()
+	Player = nil
+end
+
+-- Necesito añadir una función que permita crear NPC con parámetros.
+-- I need to add an option to procedurally create NPCs.
+
+
 -- Función usada para cargar mapas.
 -- Se usa junto a la verificación de redes, generalmente.
 function mapLoader(mapName)
