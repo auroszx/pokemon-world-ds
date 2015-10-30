@@ -30,7 +30,8 @@ while true do
 	
 	-- Mover sprite
 	Controls.read()
-
+	
+	showDamage()
 	playerMovement()
 
 	if Keys.newPress.A then
