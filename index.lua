@@ -30,7 +30,7 @@ while true do
 	
 	-- Variables para hora y fecha.
 	-- Time and date variables.
-	currentTime = DateTime.getCurrentTime()
+	currentTime = { tonumber(os.date("%H")), tonumber(os.date("%M")), tonumber(os.date("%S")) }
 	
 	-- Mover sprite
 	Controls.read()

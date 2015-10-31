@@ -45,6 +45,9 @@ end
 colorAfternoon = Color.new(31, 23, 17) -- Original: (255, 197, 143)
 colorNight = Color.new(7, 18, 31) -- Original: (64, 156, 255)
 
+-- Variable del clima
+-- Weather variable
+currentWeather = nil
 
 -- Función para aplicar efectos o colores basados en hora y clima.
 -- Function used for effects or color change based on time and weather.
@@ -53,12 +56,12 @@ colorNight = Color.new(7, 18, 31) -- Original: (64, 156, 255)
 function mapEffects()
 	-- Si es de tarde
 	-- If afternoon
-	if currentTime.hour == 5 and currentTime.hour < 8 then
+	if currentTime[1] == 5 and currentTime[1] < 8 then
 		Image.setTint(currentMap, colorAfternoon)
 	
 	-- Si es de noche
 	-- If night
-	elseif currentTime == 8 then
+	elseif currentTime[1] == 8 then
 		Image.setTint(currentMap, colorNight)
 	end
 	
