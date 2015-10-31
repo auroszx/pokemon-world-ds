@@ -14,7 +14,7 @@ end
 
 -- Esto verifica si te retan a una batalla.
 function checkBattle(playerName, playerName2)
-	checkNifiBattle = Nifi.readmessage()
+	checkNifiBattle = Nifi.readMessage()
 	if checkNifiBattle == ("" .. playerName2 .. " askBattle " .. playerName .."") then
 		screen.print(SCREEN_UP, 10, 180, "" .. playerName2 .. " te ha retado!", Azul)
 	end

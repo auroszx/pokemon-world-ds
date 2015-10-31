@@ -35,15 +35,21 @@ while true do
 	-- Mover sprite
 	Controls.read()
 	
+	screen.print(SCREEN_UP, 10, 120, currentTime[1], Azul)
+	
 	showDamage()
 	playerMovement()
 	
+	-- Envía un mensaje d eprueba usando Nifi
+	-- Sends a Nifi test message
+	if Keys.newPress.A then
+		askBattle("Auros", "Necros")
+	end
+	
+	-- Revisa si hay mensajes y luego lo compara
+	-- Checks for new messages and then compares
 	if Nifi.checkMessage() then
 		
-		if Keys.newPress.A then
-			askBattle("Auros", "Necros")
-		end
-	
 		if Keys.newPress.B then
 			checkBattle("Auros", "Necros")
 		end
