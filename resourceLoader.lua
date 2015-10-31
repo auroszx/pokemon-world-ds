@@ -48,7 +48,6 @@ colorNight = Color.new(7, 18, 31) -- Original: (64, 156, 255)
 
 -- Variables para hora y fecha.
 -- Time and date variables.
-DateTime = DateTime.new()
 currentTime = DateTime.getCurrentTime()
 
 -- Función para aplicar efectos o colores basados en hora y clima.
@@ -58,12 +57,12 @@ currentTime = DateTime.getCurrentTime()
 function mapEffects()
 	-- Si es de tarde
 	-- If afternoon
-	if currentTime == "Afternoon, needs fixing." then
+	if currentTime.hour == 5 and currentTime.hour < 8 then
 		Image.setTint(currentMap, colorAfternoon)
 	
 	-- Si es de noche
 	-- If night
-	elseif currentTime == "Night, needs fixing." then
+	elseif currentTime == 8 then
 		Image.setTint(currentMap, colorNight)
 	end
 	
