@@ -28,6 +28,10 @@ while true do
 --	timeTest:start()
 --	showNetwork()
 	
+	-- Variables para hora y fecha.
+	-- Time and date variables.
+	currentTime = DateTime.getCurrentTime()
+	
 	-- Mover sprite
 	Controls.read()
 	

@@ -46,10 +46,6 @@ colorAfternoon = Color.new(31, 23, 17) -- Original: (255, 197, 143)
 colorNight = Color.new(7, 18, 31) -- Original: (64, 156, 255)
 
 
--- Variables para hora y fecha.
--- Time and date variables.
-currentTime = DateTime.getCurrentTime()
-
 -- Función para aplicar efectos o colores basados en hora y clima.
 -- Function used for effects or color change based on time and weather.
 -- Esta es sólo para el overworld.
