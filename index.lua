@@ -33,13 +33,16 @@ while true do
 	
 	showDamage()
 	playerMovement()
-
-	if Keys.newPress.A then
-		askBattle("Auros", "Necros")
-	end
 	
-	if Keys.newPress.B then
-		checkBattle("Auros", "Necros")
+	if Nifi.checkMessage() then
+		
+		if Keys.newPress.A then
+			askBattle("Auros", "Necros")
+		end
+	
+		if Keys.newPress.B then
+			checkBattle("Auros", "Necros")
+		end
 	end
 	
 	-- Renderiza todo en base al bucle.
