@@ -12,7 +12,7 @@ Glaceon = {75, 201, 123, 181}
 Garchomp = {78, 270, 210, 163}
 icefang = 65
 earthquake = 100
-Azul = Color.new(0, 0, 31)
+Blanco = Color.new(31, 31, 31)
 
 damagetest1 = damageCalc(Glaceon[1], Glaceon[3], Garchomp[4], icefang, 1.5, 4, 1)
 Garchomp[1] = Garchomp[2] - damagetest1
@@ -35,7 +35,8 @@ while true do
 	-- Mover sprite
 	Controls.read()
 	
-	screen.print(SCREEN_UP, 10, 120, currentTime[1], Azul)
+	screen.print(SCREEN_UP, 10, 120, currentTime[1], Blanco)
+	screen.print(SCREEN_UP, 10, 140, Nifi.readMessage(), Blanco)
 	
 	showDamage()
 	playerMovement()
