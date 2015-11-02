@@ -3,7 +3,7 @@
 -- Tengo que agregar unas variables para conectar esto con sprites.lua y eso.
 
 -- Esto envía el nombre, posición y sprite del jugador.
-function sendPosition(playerName, posX, posY, playerSprite)
+function sendPosition(playerName, playerPosX, playerPosY, playerSprite)
 	Nifi.sendMessage("" .. playerName .. " " .. posX .. " " .. posY .. " " .. playerSprite .. "")
 end
 
@@ -15,7 +15,7 @@ end
 -- Esto verifica si te retan a una batalla.
 function checkBattle(playerName, playerName2)
 	checkNifiBattle = Nifi.readMessage()
-	if checkNifiBattle == ("" .. playerName2 .. " askBattle " .. playerName .."") then
+	if checkNifiBattle == ("" .. playerName .. " askBattle " .. playerName2 .."") then
 		screen.print(SCREEN_UP, 10, 180, "" .. playerName2 .. " te ha retado!", Azul)
 	end
 end
