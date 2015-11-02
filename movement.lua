@@ -21,20 +21,24 @@ function playerMovement()
 	if Keys.held.Down then
 		playerDirection = 1
 		mapPosY = mapPosY + 1
+		playerPosY = playerPosY - 1
 	end
 	
 	if Keys.held.Left then
 		playerDirection = 2
 		mapPosX = mapPosX + 1
+		playerPosX = playerPosX - 1
 	end
 	
 	if Keys.held.Right then
 		playerDirection = 3
 		mapPosX = mapPosX - 1
+		playerPosX = playerPosX + 1
 	end
 	
 	if Keys.held.Up then
 		playerDirection = 4
 		mapPosY = mapPosY - 1
+		playerPosY = playerPosY + 1
 	end
 end
