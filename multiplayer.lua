@@ -1,18 +1,22 @@
 -- Librería para funciones del modo multijugador
+-- Library used for multiplayer functionality.
 
--- Tengo que agregar unas variables para conectar esto con sprites.lua y eso.
 
 -- Esto envía el nombre, posición y sprite del jugador.
 function sendPosition(playerName, playerPosX, playerPosY, playerSprite)
-	Nifi.sendMessage("" .. playerName .. " " .. posX .. " " .. posY .. " " .. playerSprite .. "")
+	Nifi.sendMessage("" .. playerName .. " " .. playerPosX .. " " .. playerPosY .. " " .. playerSprite .. "")
 end
 
 -- Esto permite retar a otros jugadores a una batalla.
+-- Ask other players for a battle.
+
 function askBattle(playerName, playerName2)
 	Nifi.sendMessage("" .. playerName .. " askBattle " .. playerName2 .. "")
 end
 
 -- Esto verifica si te retan a una batalla.
+-- Check if somebody wants to battle you.
+
 function checkBattle(playerName, playerName2)
 	checkNifiBattle = Nifi.readMessage()
 	if checkNifiBattle == ("" .. playerName .. " askBattle " .. playerName2 .."") then
@@ -23,6 +27,7 @@ end
 -- Con esto de aquí se acepta el reto.
 -- Esto debe llamar a las funciones de batalla después.
 -- Eso incluye cambio de escena, carga de sprites, calculo de daño, y más.
+
 function acceptBattle(playerName, playerName2)
 	Nifi.sendMessage("" .. playerName .. " acceptBattle " .. playerName2 .. "")
 	startBattle(playerName, playerName2)
