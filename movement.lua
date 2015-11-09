@@ -8,8 +8,8 @@ dofile(mapScroll.lua)
 playerDirection = 1
 playerPosX = 136
 playerPosY = 112
-rePlPosX = 1
-rePlPosX = 2
+rePlPosX = 0
+rePlPosX = 0
 
 function playerMovement()
 	if Keys.held.Up or Keys.held.Down or Keys.held.Left or Keys.held.Right then
@@ -21,24 +21,24 @@ function playerMovement()
 	if Keys.held.Down then
 		playerDirection = 1
 		mapPosY = mapPosY + 1
-		playerPosY = playerPosY - 1
+		rePlPosY = rePlPosY - 1
 	end
 	
 	if Keys.held.Left then
 		playerDirection = 2
 		mapPosX = mapPosX + 1
-		playerPosX = playerPosX - 1
+		rePlPosX = rePlPosX - 1
 	end
 	
 	if Keys.held.Right then
 		playerDirection = 3
 		mapPosX = mapPosX - 1
-		playerPosX = playerPosX + 1
+		rePlPosX = rePlPosX + 1
 	end
 	
 	if Keys.held.Up then
 		playerDirection = 4
 		mapPosY = mapPosY - 1
-		playerPosY = playerPosY + 1
+		rePlPosY = rePlPosY + 1
 	end
 end
