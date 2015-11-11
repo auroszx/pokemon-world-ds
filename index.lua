@@ -49,7 +49,7 @@ while true do
 	
 	-- Revisa si hay mensajes y luego lo compara
 	-- Checks for new messages and then compares
-	if Nifi.checkMessage() then
+	if Nifi.checkMessage() == true then
 		
 		if Keys.newPress.B then
 			checkBattle("Auros", "Necros")
